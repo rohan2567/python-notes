@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Python</title>
+
+<meta name=”viewport” content=”width=device-width,  initial-scale=1, user-scalable=yes″>
+<meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
+<meta charset="UTF-8"> 
+
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<style>
+@viewport
+  {
+    width:extend-to-zoom;
+    zoom:1.0;
+  }
+@-ms-viewport
+  {
+     width:extend-to-zoom;
+    zoom:1.0;
+  }
+  
+
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    }
+    
+    * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 190px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+    }
+    
+    html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;}
+    
+    .clear {clear: both;}
+    
+    p {
+        font-size: 1em;
+        line-height: 1.4em;
+        margin-bottom: 20px;
+        color: #444;
+    }
+    
+    #cv {
+        width: 90%;
+        max-width: 800px;
+        background: #f3f3f3;
+        margin: 30px auto;
+    }
+    
+    .mainDetails {
+        padding: 25px 35px;
+        border-bottom: 2px solid #cf8a05;
+        background: #ededed;
+    }
+    
+    #name h1 {
+        font-size: 2.5em;
+        font-weight: 700;
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+        margin-bottom: -6px;
+    }
+    
+    #name h2 {
+        font-size: 2em;
+        margin-left: 2px;
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    }
+    
+    #mainArea {
+        padding: 0 40px;
+    }
+    
+    #headshot {
+        width: 12.5%;
+        float: left;
+        margin-right: 30px;
+    }
+    
+    #headshot img {
+        width: 100%;
+        height: auto;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+    }
+    
+    #name {
+        float: left;
+    }
+    
+    #contactDetails {
+        float: right;
+    }
+    
+    #contactDetails ul {
+        list-style-type: none;
+        font-size: 0.9em;
+        margin-top: 2px;
+    }
+    
+    #contactDetails ul li {
+        margin-bottom: 3px;
+        color: #444;
+    }
+    
+    #contactDetails ul li a, a[href^=tel] {
+        color: #444; 
+        text-decoration: none;
+        -webkit-transition: all .3s ease-in;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -ms-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+    }
+    
+    #contactDetails ul li a:hover { 
+        color: #cf8a05;
+    }
+    
+    
+    section {
+        border-top: 1px solid #dedede;
+        padding: 20px 0 0;
+    }
+    
+    section:first-child {
+        border-top: 0;
+    }
+    
+    section:last-child {
+        padding: 20px 0 10px;
+    }
+    
+    .sectionTitle {
+        float: left;
+        width: 25%;
+    }
+    
+    .sectionContent {
+        float: right;
+        width: 72.5%;
+    }
+    
+    .sectionTitle h1 {
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-size: 1.5em;
+        color: #cf8a05;
+    }
+    
+    .sectionContent h2 {
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+        font-size: 1.5em;
+        margin-bottom: -2px;
+    }
+    
+    .subDetails {
+        font-size: 0.8em;
+        font-style: italic;
+        margin-bottom: 3px;
+    }
+    
+    .keySkills {
+        list-style-type: none;
+        -moz-column-count:3;
+        -webkit-column-count:3;
+        column-count:3;
+        margin-bottom: 20px;
+        font-size: 1em;
+        color: #444;
+    }
+    
+    .keySkills ul li {
+        margin-bottom: 3px;
+    }
+    
+    @media all and (min-width: 602px) and (max-width: 800px) {
+        #headshot {
+            display: none;
+        }
+        
+        .keySkills {
+        -moz-column-count:2;
+        -webkit-column-count:2;
+        column-count:2;
+        }
+    }
+    
+    @media all and (max-width: 601px) {
+        #cv {
+            width: 95%;
+            margin: 10px auto;
+            min-width: 280px;
+        }
+        
+        #headshot {
+            display: none;
+        }
+        
+        #name, #contactDetails {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .sectionTitle, .sectionContent {
+            float: none;
+            width: 100%;
+        }
+        
+        .sectionTitle {
+            margin-left: -2px;
+            font-size: 1.25em;
+        }
+        
+        .keySkills {
+            -moz-column-count:2;
+            -webkit-column-count:2;
+            column-count:2;
+        }
+    }
+    
+    @media all and (max-width: 480px) {
+        .mainDetails {
+            padding: 15px 15px;
+        }
+        
+        section {
+            padding: 15px 0 0;
+        }
+        
+        #mainArea {
+            padding: 0 25px;
+        }
+    
+        
+        .keySkills {
+        -moz-column-count:1;
+        -webkit-column-count:1;
+        column-count:1;
+        }
+        
+        #name h1 {
+            line-height: .8em;
+            margin-bottom: 4px;
+        }
+    }
+    
+    @media print {
+        #cv {
+            width: 100%;
+        }
+    }
+    
+    @-webkit-keyframes reset {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @-moz-keyframes reset {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @-moz-keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes reset {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .instaFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1.5s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
+    }
+    
+    .quickFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 2.5s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 2.5s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in;
+    }
+     
+    .delayOne {
+        -webkit-animation-delay: 0, .5s;
+        -moz-animation-delay: 0, .5s;
+        animation-delay: 0, .5s;
+    }
+    
+    .delayTwo {
+        -webkit-animation-delay: 0, 1s;
+        -moz-animation-delay: 0, 1s;
+        animation-delay: 0, 1s;
+    }
+    
+    .delayThree {
+        -webkit-animation-delay: 0, 1.5s;
+        -moz-animation-delay: 0, 1.5s;
+        animation-delay: 0, 1.5s;
+    }
+    
+    .delayFour {
+        -webkit-animation-delay: 0, 2s;
+        -moz-animation-delay: 0, 2s;
+        animation-delay: 0, 2s;
+    }
+    
+    .delayFive {
+        -webkit-animation-delay: 0, 2.5s;
+        -moz-animation-delay: 0, 2.5s;
+        animation-delay: 0, 2.5s;
+	}
+	
+
+
+
+
+
+
+
+
+	
+</style>
+
+
+
+
+
+<body id="top">
+
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYIlDQ-DZsIHewremj5youZi6Flx79mWHSdANJ3MUV220Ktztr&usqp=CAU" >
+		</div>
+		
+		<div id="name">
+			<h1 class="quickFade delayTwo">Python Scripting</h1>
+			<!-- <h2 class="quickFade delayThree">DevOps</h2> -->
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li>
+                    What is Python ?
+                </li>
+                <li>Python Basics</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+				<li>Collections</li>
+                <li>Libraries and Built-In</li>
+                <li>File Handling</li>
+                <li>Exception Handling</li>
+                <li>Python Programming Using MySql</li>
+                <li>Database Programming using MongoDB</li>
+                <li>Git Operations Using Python</li>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+
+
+
+
+
+	    <div id="mainArea" class="quickFade delayFive">
+		    <div>
+                    <p>
+                        <center>
+                            <h1>
+                                What is Python ?
+                            </h1>
+                        </center> <br>
+                         The Python implementation is under an open source license that makes it freely usable and distributable, even for commercial use.
+<br><br>
+Python is a high level language which is interpreted by a python interpreter.
+<br><br>
+Python can be executed on all major platforms like Windows, Linux/Unix, OS/2, Mac and others.
+<br>
+<br>
+In Python we encapsulate data within the objects as it supports the object oriented style of programming.
+<br>
+<br>
+Python is easy to learn and follows a simple syntax, so it is good choice for beginner programmers. Python also supports wide range of application development.
+<br><br>
+Python has a large range of libraries and built in functions which helps in easy and rapid development of applications.
+<br><br>
+Python provides user a command prompt where one can interact directly with interpreter to write programs.
+<br><br>
+Python provides interfaces required to connect to all major databases like Oracle, MySQL, PostgreSQL and others.
+<br>                
+                    
+                    
+                    
+                    
+                    
+                    
+                    </p>
+                    <hr>
+                
+                    <p>
+                        <center>
+                            <h1>
+                                Python Basics
+                            </h1>
+                        </center> <br>
+                    <ol type="1">
+                        <li> 
+                            &nbsp;&nbsp;Identifiers and Keywords
+                            <br>
+                            <ul>
+                                <li>
+                                In Python any variable, function, class, module and object are identified using a name which is called as identifier. An identifier can start with uppercase or lowercase character or an underscore (_) followed by any number of underscores, letters and digits. All identifiers in python are case sensitive.
+                                <br>Example: weight=10
+                                </li>
+                                <li>
+                                    Keywords are the reserved words in python. So keywords cannot be used as an identifier and to name variables or functions. Few of the keywords are listed below.
+                                    <br>Example: if, else, elif, for, where, break, continue
+                                </li>
+                            </ul>
+                        </li>
+
+                        <br>
+                        <li>
+                            Variables and datatypes in Python
+                            <ul>
+                                <li>
+                                    Variables are like containers for data (i.e. they hold the data)
+                                     and the value of variable can 
+                                     vary throughout the program.<br>
+                                     Syntax: var_name = literal_value
+                                </li>
+                                <li>
+                                    Python may have data belonging to different types. 
+                                    Common data types used in programming are: 
+                                    <br>
+                                    <br>
+                                    <center>
+                                        <img src="assets/Python/1.png" height="250" width="350">
+                                    </center>
+                                    
+                                </li><br>
+                                <li>
+                                    Python is a dynamically typed language!
+                                    <br>
+                                    num=65 #line 1
+                                    <br>num="A" #line 2
+                                    <br>In line 1, variable num is assigned a value 65 which is an integer, 
+                                    so the data type of variable num is integer in line 1.
+                                    <br>In line 2, variable num is assigned a value “A” which is a string,
+                                    so the data type of  variable num is string in line 1.
+                                    <br>
+                                    To check the datatype of the variable we can use 
+                                    type(var_name) which in turn returns datatype of the variable.
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            Operators
+                            <br>
+                            Operators in python are the symbols used to perform an operation
+                            <br>
+                            <br>
+                            <center>
+                                <img src="assets/Python/2.png" height="750" width="750">
+                            </center><br>
+
+                        </li>
+
+
+                        <li>
+                                Type Conversion :
+                                <br>
+                                Example :
+                                <br>
+                                If we want to add a string and a number we have to convert the string datatype 
+                                to integer datatype using type conversion.
+                                <br>
+                                <div style="align-items: center;">
+                                    <div style="text-align: justify;">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num1=10<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num2="20"<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result=num1+int(num2)<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(result)
+                                    </div>
+                                </div>
+                                </center>
+                        </li>
+                    </ol>        
+                    </p> <hr>
+
+
+                    <p>
+                        <center>
+                            <h1>
+                                Control Structures
+                            </h1>
+                        </center> <br>
+                    notes                        
+                    </p> <hr>
+
+
+                    <p>
+                        <center>
+                            <h1>
+                                Functions
+                            </h1>
+                        </center> <br>
+                        Functions are set of instructions to perform a specific task.
+                        <br><br>
+                        <center>
+                            <img src="assets/Python/3.png" height="400" width="720">
+                        </center><br>
+                        <br>
+                        Programming languages allow controlling the ordering and default values of arguments.
+                        <br><br>
+                        <center>
+                            <img src="assets/Python/4.png" height="400" width="720">
+                        </center><br>
+
+                    </p> <hr>
+
+                    <p>
+                        <center>
+                            <h1>
+                                Collections
+                            </h1>
+                        </center> <br>
+                        When we want to treat some data as a group, it would not be good to create
+                        individual variables for each data. We can store them together as a collection.   
+                        <br>
+                        <ol type="1">
+                            <li>
+                                List
+                                <br>
+                                If we want to store marks of a student, we can use a list.
+                                <br>
+                                 <center>My_List=[80,54,13,96,74]</center>
+                                <br>
+                                <br>
+                                Each element in the list has a position in the list known as an index.
+                                The list index starts from zero.
+                                <br><br>
+                                <center>
+                                    <img src="assets/Python/5.png" height="400" width="720">
+                                </center><br>
+                                
+                                Accessing the List :
+                                <br>
+                                <center>
+                                    <img src="assets/Python/6.png" height="60" width="220">
+                                </center><br>
+                                <br>
+                                Slicing :
+                                <br><br>
+                                <center>
+                                    <img src="assets/Python/7.png" height="300" width="420">
+                                </center><br>
+                            </li>
+
+                            <li>
+                                Tuple 
+                                <br>
+                                Using list anyone can edit the element. What if we store it such that no one can modify the elements
+                                <br>
+                                This is where we can use another collection data type known as tuple.
+                                <br>Like list, tuple can also store a sequence of elements but the value of the elements cannot be changed. 
+                                (i.e. tuples are IMMUTABLE). Elements can be homogeneous or heterogeneous but they are <br>READ-ONLY.
+                                <br>
+                                <br><center>
+                                    <img src="assets/Python/8.png" height="400" width="720">
+                                </center><br>
+                                &nbsp;&nbsp;&nbsp;All the remaining operations are similar to lists.
+                            <br>
+
+                            </li>
+
+                            <li>
+                                String
+                                <br>
+                                In Python, string is a data type and anything enclosed in a single quote or double quote is considered to be a string. 
+                                All the remaining operations are similar to lists. But like tuple, strings are also IMMUTABLE.
+                                <br>
+                                Each value in a string is called a character. 
+                                Just like list elements, we can access the characters in a string based on its index position.
+                                <br>
+                                <br>
+                                <center>
+                                    <img src="assets/Python/9.png" height="60" width="220">
+                                </center><br>
+                                <br>
+                                Few operations on Strings:
+                                <br>
+                                <br>
+                                <center>
+                                    <img src="assets/Python/10.png" height="400" width="720">
+                                </center><br>
+
+                            </li>
+
+                            <li>
+                                Set
+                                <br>
+                                A set is an unordered group of values with no duplicate entries. Set can be created by 
+                                using the keyword set or by using curly braces {}. set function is used to eliminate duplicate values in a list.
+                                <br><br>
+                                <center>
+                                    <img src="assets/Python/11.png" height="310" width="710">
+                                </center><br>
+                            </li>
+
+                            <li>
+                                Dictionary
+                                <br>
+                                A dictionary can be used to store an unordered collection of key-value pairs. 
+                                The key should be unique and can be of any data type. Like lists, dictionaries are mutable.
+                                <br>
+                                <br>
+                                <center>
+                                    <img src="assets/Python/12.png" height="240" width="710">
+                                </center><br>
+                            </li>
+                        </ol>           
+                    </p> <hr>
+
+                    <p>
+                        <center>
+                            <h1>
+                                Libraries and Built In 
+                                <br>
+                            </h1>
+                        </center> <br>
+                    <br>
+                    <ul>
+                        <li>
+                            random module :
+                            <br>
+                            This module helps in generating random numbers.
+                            <br>
+                            Example : To print random numbers between a range
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import random<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x=10<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y=50<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.randrange(x,y))
+                        </li>
+
+                        <li>
+                            math module
+                            <br>
+                            <br>
+                            <center>
+                                <img src="assets/Python/13.png" height="300" width="400">
+                            </center><br>
+                        </li>
+
+                        <li>
+                            string functions<br>
+                            Consider the string, name="Raghav".
+                            <br><br>
+                            <center>
+                                <img src="assets/Python/14.png" height="380" width="720">
+                            </center><br>
+                        </li>
+                        <li>
+
+                            list functions<br>
+                            Consider a list, num_list=[10,20,30,40,50]
+                            <br><br>
+                            <center>
+                                <img src="assets/Python/15.png" height="300" width="720">
+                            </center><br>
+                        </li>
+
+                        <li>
+                            dictionary functions<br>
+                            Consider a dictionary : 
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crew_details=
+                            {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "Pilot":"Kumar",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "Co-pilot":"Raghav",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "Head-Strewardess":"Malini",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "Stewardess":"Mala"
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            }
+                            <br>
+                            <br>
+                            <center>
+                                <img src="assets/Python/16.png" height="250" width="620">
+                            </center><br>
+                  
+                            
+                        </li>
+
+                        <li>
+                            Regular Expressions
+                            <br>
+                            &nbsp;&nbsp;&nbsp;Regular Expressions are used to check and extract relevant portions of a string 
+                            based on a pattern and &nbsp;&nbsp;&nbsp;modify if required. 
+                             Python has a module named <strong>'re'</strong> regular expressions.
+                             <br>The re module offers a set of functions that allows us to search a string for a match<br>
+                             <br>
+                             1. findall() -> Returns a list containing all matches<br>
+                             2. search()  -> Returns a Match object if there is a match anywhere in the string<br>
+                             3. split()   -> Returns a list where the string has been split at each match<br>
+                             4. sub()     -> Replaces one or many matches with a string<br>
+
+
+                             &nbsp;&nbsp;&nbsp;<h2>Examples on findall() :</h2>
+
+                             <div class="row">
+                               <div class="column">
+                                 <p>
+                                     <img src="assets/Python/17.png" height="170" width="300">
+                                 </p>
+                               </div>
+                               <div class="column">
+                                 <p>
+                                    <img src="assets/Python/18.png" height="170" width="300">
+                                 </p>
+                                 
+                               </div>
+                             </div>
+
+                             <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/19.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/20.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/21.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/22.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/23.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/24.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/25.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/26.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+
+                              <!-- FROM HERE -->
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/27.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/28.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/29.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/30.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/31.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/32.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/33.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/34.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/35.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/36.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/37.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/38.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/39.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/40.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/41.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/42.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+                              <br>
+                              Examples on search() :
+                              <br>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/43.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/44.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+                              
+
+
+                              Examples on split() :
+                              <br>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/45.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/46.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+                    
+
+                              Examples on sub() :
+                              <br>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/47.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/48.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+                              
+                              Examples of match() :
+                              <br>
+                              The Match object has properties and methods used to retrieve information about the search, and the result:
+                              <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. span() -> returns a tuple containing the start-, and end positions of the match.
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. string() -> returns the string passed into the function
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. group() -> returns the part of the string where there was a match
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/49.png" height="170" width="300">
+                                </div>
+                                <div class="column">
+                                    <img src="assets/Python/50.png" height="170" width="300">
+                                </div>
+                                
+                              </div>
+
+                              <div class="row">
+                                <div class="column">
+                                    <img src="assets/Python/51.png" height="170" width="300">
+                                </div>
+                              </div>
+                    </ul>                
+                    </p> <hr>
+
+                    <!-- <p>
+                        <center>
+                            <h1>
+                                Modules and Packages
+                            </h1>
+                        </center> <br>
+                    notes                        
+                    </p> <hr> -->
+
+                    <p>
+                        <center>
+                            <h1>
+                                File Handling
+                            </h1>
+                        </center> <br>
+                        File handling is an important part of any web application.
+                        <br>
+                        Python has several functions for creating, reading, updating, and deleting files.    
+                        <ul>
+                            <li>
+                                Opening Files<br>
+                                The key function for working with files in Python is the open() function.
+                                The open() function takes two parameters; filename, and mode.
+                                <br>There are four different methods (modes) for opening a file:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"r" - Read - Default value. Opens a file for reading, 
+                                error if the file does not exist<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "a" - Append - Opens a file for appending, creates the file if it does not exist<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "w" - Write - Opens a file for writing, creates the file if it does not exist<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "x" - Create - Creates the specified file, returns an error if the file exists
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"t" - Text - Default value. Text mode<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                "b" - Binary - Binary mode (e.g. images)<br>
+                                
+                                Suppose we have a file "demofile.txt". Lets perform some operations on the file.
+                                <br>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="assets/Python/52.png" height="100" width="300">
+                                    </div>
+                                    <div class="column">
+                                        <img src="assets/Python/53.png" height="170" width="300">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="assets/Python/54.png" height="170" width="300">
+                                    </div>
+                                    <div class="column">
+                                        <img src="assets/Python/55.png" height="170" width="300">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="assets/Python/56.png" height="170" width="300">
+                                    </div>
+                                    <div class="column">
+                                        <img src="assets/Python/57.png" height="170" width="300">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="assets/Python/58.png" height="170" width="300">
+                                    </div>
+                                    <div class="column">
+                                        <img src="assets/Python/59.png" height="170" width="300">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="assets/Python/60.png" height="170" width="300">
+                                    </div>
+                                    <div class="column">
+                                        <img src="assets/Python/61.png" height="170" width="300">
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </p> <hr>
+
+                    <p>
+                        <center>
+                            <h1>
+                                Exceptional Handling
+                            </h1>
+                        </center> <br>
+                    notes                        
+                    </p> <hr>
+
+
+                    <p>
+                        <center>
+                            <h1>
+                                Python Programming Using MySql
+                            </h1>
+                        </center> <br>
+                    notes                        
+                    </p> <hr>
+
+                    <p>
+                        <center>
+                            <h1>
+                                Python Programming Using MongoDB
+                            </h1>
+                        </center> <br>
+                    notes                        
+                    </p> <hr>
+
+
+                    <p>
+                        <center>
+                            <h1>
+                                Git Operations using
+                            </h1>
+                        </center> <br>
+                    notes                        
+                    </p> <hr>
+
+
+
+
+            </div>
+	    </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
